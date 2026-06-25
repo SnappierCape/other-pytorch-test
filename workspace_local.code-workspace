@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+        // 1. General Rulers
+        "editor.rulers": [
+            79
+        ],
+        // 2. Venv Settings (tell VSCode to look for python interpreters in subfolders too)
+        "python.venvFolders": [
+            ".venv",
+            "venv",
+            "env"
+        ],
+        "python.analysis.extraPaths": [
+            "./**/.venv"
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://ssh-remote+ai/python_ml/Projects/pytorch_tests"
+		}
+	],
+	"remoteAuthority": "ssh-remote+ai",
+	"settings": {
+        // 1. General Rulers
+        "editor.rulers": [
+            79
+        ],
+        // 2. Venv Settings (tell VSCode to look for python interpreters in subfolders too)
+        "python.venvFolders": [
+            ".venv",
+            "venv",
+            "env"
+        ],
+        "python.analysis.extraPaths": [
+            "./**/.venv"
+        ]
+    }
+}

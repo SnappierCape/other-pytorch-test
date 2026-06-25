@@ -1,0 +1,32 @@
+[project]
+name = "pytorch-tests"
+version = "0.1.0"
+description = "Tests to learn pytorch"
+readme = "README.md"
+requires-python = ">=3.12, <3.13"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "matplotlib>=3.10.8",
+    "notebook>=7.5.5",
+    "numpy",
+    "pandas>=3.0.2",
+    "scikit-learn>=1.8.0",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+]
+
+[tool.uv]
+environments = [
+    "sys_platform == 'win32' and python_version == '3.12'",
+    "sys_platform == 'linux' and python_version == '3.12'"
+]
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cuda" }
+torchvision = { index = "pytorch-cuda" }
+torchaudio = { index = "pytorch-cuda" }
